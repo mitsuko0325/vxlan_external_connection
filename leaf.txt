@@ -14,6 +14,9 @@ vrf context 9991000_vrf
     route-target both auto
     route-target both auto evpn
 
+route-map fabric-rmap-redist-subnet permit 10
+  match tag 12345
+
 interface Vlan1000
   no shutdown
   mtu 9216
